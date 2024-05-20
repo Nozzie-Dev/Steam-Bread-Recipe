@@ -1,8 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(45deg, #009dff, #e52eba);
   margin: 0;
   padding: 0;
+  background: radial-gradient(circle, rgba(174,236,238,1) 0%, rgba(148,232,233,0.4051995798319328) 100%);
 }
 
 header {
@@ -14,6 +14,9 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  border-radius: 5px;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  box-shadow: 5px 10px rgba(63,94,251,1);
 }
 
 h1,
@@ -48,6 +51,7 @@ video {
   font-weight: bold;
 }
 
+
 .wiggle {
   animation: wiggle 0.5s ease-in-out infinite alternate;
 }
@@ -60,3 +64,5 @@ video {
     transform: rotate(3deg);
   }
 }
+
+

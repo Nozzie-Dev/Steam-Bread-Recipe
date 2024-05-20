@@ -11,10 +11,10 @@
       <h1>Steam Bread Recipe</h1>
     </header>
     <main>
-      <div id="video-container">
+      <div>
         <video id="video" controls>
           <source src="steam-bread.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          Your browser does not support the video tag. 
         </video>
       </div>
       <section id="ingredients">
@@ -34,6 +34,7 @@
           <li id="warm-water">2 cups warm water</li>
         </ul>
       </section>
+      <!--Match id to data-gradient for scripting-->
       <section id="instructions">
         <h2>Instructions:</h2>
         <ol>
@@ -75,6 +76,7 @@
       </section>
     </main>
     <script>
+    //Additional JS to add interaction between the instruction and ingredients
       const instructions = document.querySelectorAll("#instructions ol li");
       const ingredients = document.querySelectorAll("#ingredients ul li");
 
@@ -95,5 +97,6 @@
         });
       });
     </script>
+    <p style="text-align: center; margin: 0; padding: 15px;">HTML and CSS Capstone by <a href="https://github.com/nozzie-dev">Noziphezinhle Nzimande</a> open source repository available on <a href="https://github.com/Nozzie-Dev/Steam-Bread-Recipe">GitHub</a></p>
   </body>
 </html>
