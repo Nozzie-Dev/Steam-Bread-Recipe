@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steam Bread Recipe</title>
+    <link rel="stylesheet" href="styling.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Steam Bread Recipe</h1>
+    </header>
+    <main>
+      <div id="video-container">
+        <video id="video" controls>
+          <source src="steam-bread.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <section id="ingredients">
+        <h2>You will need:</h2>
+        <ul>
+          <li id="butter">Butter, for greasing</li>
+          <li id="cups">4-6 Porcelain Sipper Cups</li>
+          <li id="bowl">1 Large Bowl</li>
+          <li id="pot">1 Large Pot</li>
+        </ul>
+        <h2>Ingredients:</h2>
+        <ul>
+          <li id="flour">4 <span id="half">1/2</span> cups cake flour</li>
+          <li id="yeast">2 tsp instant dry yeast</li>
+          <li id="salt">2 tsp salt</li>
+          <li id="sugar">4 tsp sugar</li>
+          <li id="warm-water">2 cups warm water</li>
+        </ul>
+      </section>
+      <section id="instructions">
+        <h2>Instructions:</h2>
+        <ol>
+          <li data-gradient="butter cups">
+            Grease 4-6 porcelain sipper cups with butter.
+          </li>
+          <li data-gradient="flour yeast salt sugar bowl">
+            Sift dry ingredients into a large bowl.
+          </li>
+          <li data-gradient="warm-water">Add warm water.</li>
+          <li data-gradient="bowl">
+            Knead until the dough combines and does not stick to your hands.
+          </li>
+          <li data-gradient="bowl">
+            Cover with cling wrap, put in a warm place and allow dough to rise
+            for 25 minutes.
+          </li>
+          <li data-gradient="bowl">
+            Knead dough again for 2 minutes, cover with cling wrap and allow to
+            rise for 15 minutes.
+          </li>
+          <li data-gradient="bowl cups">
+            Knead the dough for 2 minutes and separate into the sipper cups.
+          </li>
+          <li data-gradient="pot">
+            In a large pot, boil enough water reach halfway up the cup(when the
+            water boils it must not reach dough or get in the cup)
+          </li>
+          <li data-gradient="cups pot">
+            Place cups in the pot. Cover with lid, on medium heat, steam the
+            bread for at least 45mins or until cooked
+          </li>
+          <li>
+            Monitor water levels, top up with boiling water if neccesary. To
+            test if bread is cooked insert a knife in the centre. When bread is
+            ready, it should come out dry.
+          </li>
+        </ol>
+      </section>
+    </main>
+    <script>
+      const instructions = document.querySelectorAll("#instructions ol li");
+      const ingredients = document.querySelectorAll("#ingredients ul li");
+
+      instructions.forEach((instruction) => {
+        instruction.addEventListener("mouseover", () => {
+          const ingredientIds = instruction.dataset.gradient.split(" ");
+          ingredientIds.forEach((ingredientId) => {
+            const relatedIngredient = document.getElementById(ingredientId);
+            relatedIngredient.classList.add("bold", "wiggle");
+          });
+        });
+        instruction.addEventListener("mouseout", () => {
+          const ingredientIds = instruction.dataset.gradient.split(" ");
+          ingredientIds.forEach((ingredientId) => {
+            const relatedIngredient = document.getElementById(ingredientId);
+            relatedIngredient.classList.remove("bold", "wiggle");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
